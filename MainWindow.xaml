@@ -1,0 +1,44 @@
+﻿<Window x:Class="ChatBoi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatBoi"
+        mc:Ignorable="d"
+        Title="ChatBoi" Height="350" Width="550">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Name="MessageScrollViewer" Grid.Row="0" Margin="10" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Name="MessageStackPanel" Grid.Row="0" VerticalAlignment="Bottom" Margin="10" Orientation="Vertical" Width="480"/>
+        </ScrollViewer>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="175"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Row="0" Name="Tb_" Width="320" Height="30" Margin="10"
+         BorderThickness="1" BorderBrush="LightGray" Background="LightGray" 
+         TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"
+         TextChanged="Tb__TextChanged" AcceptsReturn="True" Text="Write to ChatLad" GotFocus="Tb_GotFocus" Padding="5">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Button Name="btn" Content="Send" Width="75" Height="30" Margin="0,10,0,5"
+                    HorizontalAlignment="Center" Click="Sendbtn_Click" Grid.Column="1" BorderThickness="0" Background="Black" Foreground="White"/>
+        </Grid>
+
+    </Grid>
+
+</Window>
+    
