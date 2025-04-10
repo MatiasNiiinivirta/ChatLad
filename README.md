@@ -1,4 +1,4 @@
-ChatLad: An API based Chatbot with Old English Flair
+ChatLad: An API based Chatbot with Old English Flair ( or your own custom solution ) 
 
 Overview
 
