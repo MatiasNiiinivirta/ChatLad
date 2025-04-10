@@ -1,14 +1,13 @@
-ChatLad: A WPF Chatbot with Old English Flair
+ChatLad: An API based Chatbot with Old English Flair
 
 Overview
 
-ChatLad is a WPF-based chatbot application that integrates with the Google Gemini API (or other similar chatbot APIs) to provide interactive conversations. The chatbot is designed to respond in Old English while offering a user-friendly graphical interface.
+ChatLad is a WPF-based chatbot application that integrates with the Google Gemini API (or other similar chatbot APIs) to facilitate interactive conversations. Designed with a user-friendly graphical interface, the chatbot responds in Old English for a fun and unique experience. While the Old English is a playful feature, the core functionality of the app is to provide an interface for customer service purposes. The language style can easily be adjusted or removed to suit real-world applications.
 
 Features
 
 Interactive Chat Interface: A clean and responsive chat UI built with WPF.
 Google Gemini Integration: Sends user messages to the Google Gemini API for processing and retrieves responses.
-Customizable Instructions: Define the chatbot's behavior and tone, e.g., speaking in Old English.
 Dynamic Textbox Resizing: The input box adjusts its size based on the user's input.
 Message Styling: User and chatbot messages are visually distinct with styled borders and text.
 
@@ -16,62 +15,38 @@ Prerequisites
 
 .NET Framework or .NET Core compatible development environment.
 An API key for Google Gemini or another chatbot API.
-Newtonsoft.Json library for JSON serialization and deserialization.
+
+![CHATBOI](https://github.com/user-attachments/assets/5bcc1e26-a590-4a49-a288-fbdfccb0271b)
+
+![ChatboiCode](https://github.com/user-attachments/assets/48915782-8e3a-49cd-bdea-7373e47dc492)
+
+Usage:
+
+-.Download the project and open the sln. in your visual studio. 
+- Generate an API key Google Gemini or another chatbot API. ( in case of gemini for example here: https://aistudio.google.com/prompts/new_chat)
+- Navigate into MainWindow.cs and copy you API key here:
+ 
+![APIkey](https://github.com/user-attachments/assets/3aba059a-e2e9-4077-b14d-180f42ef8a6c)
+
+BONUS
+- You can change the response style of the chatbot here by describing your instructions into systemInstructions
+
+  ![chatboiPromt](https://github.com/user-attachments/assets/2e8166f4-5561-4753-8b1e-6f6e092d7318)
+
+- You can modify the chatbot for customer service
+
+  ![Customerserver](https://github.com/user-attachments/assets/469717c8-4cbc-4761-b233-fd8e9fadf4d1)
+
+
+- OR you can even modify the chatbot to talk like ghetto! or whatever you want 
+
+  
+![ghetto](https://github.com/user-attachments/assets/e5b44e04-9371-4e5c-ad72-76a0132d9060)
+
+  
 
 Installation
 
-Clone the repository or copy the provided code into your development environment.
-Ensure that all required NuGet packages are installed: Newtonsoft.Json
-Replace YOUR_API_KEY in the CallGoogleGeminiAPI method with your valid API key.
-Update the apiUrl in the same method if you use a different API or endpoint.
+.
 
-Usage
 
-Start the Application: Launch the WPF application.
-Enter a Message: Type a message in the input box labeled "Write to ChatLad."
-On focus, the placeholder text clears.
-Send the Message: Click the "Send" button to send your input to the chatbot.
-View Responses: ChatLad's responses appear dynamically in the chat interface.
-Key Methods and Logic
-
-1. CallGoogleGeminiAPI
-
-Sends a POST request to the chatbot API with the user's message.
-Processes the JSON response to extract the chatbot's reply.
-Handles API errors and exceptions gracefully.
-
-2. Sendbtn_Click
-
-Combines system instructions and the user’s message.
-Calls the CallGoogleGeminiAPI method to fetch the chatbot’s response.
-Displays both user input and chatbot responses in the chat interface.
-
-3. AddMessageToChat
-
-Styles and adds messages (user or chatbot) to the chat interface.
-Distinguishes between user and chatbot messages with color and alignment.
-
-4. Tb__TextChanged
-
-Dynamically adjusts the height of the input textbox based on the content.
-
-5. Tb_GotFocus
-
-Clears the default placeholder text when the input box gains focus.
-
-Customization
-
-Chatbot Behavior: Modify the systemInstructions string in Sendbtn_Click to change ChatLad’s behavior and tone.
-API Integration: Update the apiUrl and request structure in CallGoogleGeminiAPI for compatibility with other chatbot APIs.
-UI Appearance: Customize styles and colors in the AddMessageToChat method to match your preferences.
-
-Troubleshooting
-
-API Key Issues: Ensure that the API key is correctly set and has valid permissions.
-UI Not Responding: Verify that all required libraries are installed and the WPF application is properly configured.
-Incorrect Responses: Double-check the request structure to ensure compatibility with your API.
-
-Future Improvements
-
-Add support for voice input and output.
-Enable logging for debugging and analytics.
