@@ -45,7 +45,22 @@ BONUS
 
   
 
-Installation
+HOW TO RUN
+- Download the ZIP file from GitHub.
+
+- Extract the contents of the ZIP file.
+
+- open visual studio
+
+- Choose: Open a folder or a solution
+
+- Navigate to the extracted file and choose .csproj file
+
+- This should open the project in visual studio and create a sln. file
+
+- Navigate to MainWindow and paste your API-key
+
+- Run the program
 
 .
 
